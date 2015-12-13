@@ -42,6 +42,9 @@ Options and description:
     + **none** - standard behavior, the widget works the same way as the original Slideset widget does.
     + **Lightbox** - lightbox opens with "full size" image, user can switch between the images using array buttons (image grouping is implemented) in the lightbox mode without closing it.
 
+# Extra
+A tutorial how the first version of this module was created is available on the [Yootheme forum](https://yootheme.com/support/question/85422).
+
 # Authors, Contributors and Acknowledgment
 * This widget is created by [Ramil Valitov](http://www.valitov.me).
 * The code is based on the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/map) by [Yootheme](http://yootheme.com/).
@@ -50,7 +53,7 @@ Options and description:
 Your feedback is very appreciated. If you want to see new features in this module, please, post your ideas and feature requests in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues).
 
 # Support or Contact
-Having trouble with MapEx Widget? May be something has already been described in the [Wiki area](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki) or reported in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues). If you don't find your problem there, then, please, add your issue there. 
+Having trouble with Slidesetlightbox Widget? May be something has already been described in the [Wiki area](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki) or reported in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues). If you don't find your problem there, then, please, add your issue there. 
 
 Being a free project which I do in my spare time, I hope you understand that I can't offer 24/7 support:) You may contact me via e-mail ramilvalitov@gmail.com, I will try to answer to all of them (if such messages imply an answer), however, not immediately, it may take a few days or a week... so, just be patient. 
 
