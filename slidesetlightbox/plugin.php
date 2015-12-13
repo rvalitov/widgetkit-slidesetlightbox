@@ -2,17 +2,17 @@
 
 return array(
 
-    'name' => 'widget/slideset',
+    'name' => 'widget/slidesetlightbox',
 
     'main' => 'YOOtheme\\Widgetkit\\Widget\\Widget',
 
     'config' => array(
 
-        'name'  => 'slideset',
-        'label' => 'Slideset',
+        'name'  => 'slidesetlightbox',
+        'label' => 'Slideset Lightbox',
         'core'  => true,
-        'icon'  => 'plugins/widgets/slideset/widget.svg',
-        'view'  => 'plugins/widgets/slideset/views/widget.php',
+        'icon'  => 'plugins/widgets/slidesetlightbox/widget.svg',
+        'view'  => 'plugins/widgets/slidesetlightbox/views/widget.php',
         'item'  => array('title', 'content', 'media'),
         'settings' => array(
             'nav'                => true,
@@ -45,6 +45,8 @@ return array(
             'media_overlay'      => 'icon',
             'overlay_animation'  => 'fade',
             'media_animation'    => 'scale',
+			
+			'lightbox'    		 => 'lightbox',
 
             'title'              => true,
             'content'            => true,
@@ -71,7 +73,7 @@ return array(
         },
 
         'init.admin' => function($event, $app) {
-            $app['angular']->addTemplate('slideset.edit', 'plugins/widgets/slideset/views/edit.php', true);
+            $app['angular']->addTemplate('slidesetlightbox.edit', 'plugins/widgets/slidesetlightbox/views/edit.php', true);
         }
 
     )

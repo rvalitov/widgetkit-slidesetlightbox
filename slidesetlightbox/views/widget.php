@@ -1,4 +1,12 @@
 <?php
+/*
+Custom Slideset widget with Lightbox effect for Widgetkit 2.
+Author: Ramil Valitov
+Contacts: ramilvalitov@gmail.com
+This plugin adds Lightbox effect to a standard Slideset widget.
+Web: http://www.valitov.me/
+Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
+*/
 
 // JS Options
 $options = array();
@@ -140,6 +148,11 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
     <div class="uk-slidenav-position uk-margin">
 
         <ul class="uk-slideset <?php echo $grid; ?>">
+		<?php 
+		if ($settings['lightbox']=='lightbox')
+			//Creating unique $groupcode variable to be used as a lightbox group id.
+			$groupcode=uniqid('wk-slideset-lightbox');
+		?>
         <?php foreach ($items as $item) :
 
                 // Social Buttons
@@ -225,7 +238,11 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
                         }
 
                     } elseif ($settings['media_overlay'] == 'link' || $settings['media_overlay'] == 'icon' || $settings['media_overlay'] == 'image') {
-                        $overlay = '<a class="uk-position-cover" href="' . $item->escape('link') . '"' . $link_target . '></a>';
+						if ($settings['lightbox']=='lightbox'){
+							//Nothing here
+						}
+						else
+							$overlay = '<a class="uk-position-cover" href="' . $item->escape('link') . '"' . $link_target . '></a>';
                         $overlay_hover = ' uk-overlay-hover';
                     }
 
@@ -273,7 +290,9 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
 
                 <div class="<?php echo $panel; ?><?php echo $panel_hover; ?> uk-text-<?php echo $settings['text_align']; ?>">
 
-                    <?php if ($item['link'] && $settings['panel_link']) : ?>
+					<?php if ($settings['lightbox']=='lightbox') : ?>
+					<a class="uk-position-cover uk-position-z-index" title="<?php echo htmlspecialchars($item['title']);?>" data-lightbox-type="image" data-uk-lightbox="{group:'<?php echo $groupcode;?>'}" href="<?php echo $item->get('media'); ?>"<?php echo $link_target; ?>></a>
+					<?php elseif ($item['link'] && $settings['panel_link']) : ?>
                     <a class="uk-position-cover uk-position-z-index" href="<?php echo $item->escape('link'); ?>"<?php echo $link_target; ?>></a>
                     <?php endif; ?>
 

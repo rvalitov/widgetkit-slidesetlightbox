@@ -1,3 +1,14 @@
+<?php
+/*
+Custom Slideset widget with Lightbox effect for Widgetkit 2.
+Author: Ramil Valitov
+Contacts: ramilvalitov@gmail.com
+This plugin adds Lightbox effect to a standard Slideset widget.
+Web: http://www.valitov.me/
+Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
+*/
+?>
+
 <div class="uk-grid uk-grid-divider uk-form uk-form-horizontal" data-uk-grid-margin>
     <div class="uk-width-medium-1-4">
 
@@ -309,6 +320,18 @@
                             <option value="scale">{{'Scale' | trans}}</option>
                             <option value="spin">{{'Spin' | trans}}</option>
                             <option value="grayscale">{{'Grayscale' | trans}}</option>
+                        </select>
+                    </div>
+                </div>
+				
+				<h3 class="wk-form-heading">{{'Advanced Settings' | trans}}</h3>
+
+                <div class="uk-form-row">
+                    <label class="uk-form-label" for="wk-media-lightbox">{{'Lightbox Type' | trans}}</label>
+                    <div class="uk-form-controls">
+                        <select id="wk-media-lightbox" class="uk-form-width-medium" ng-model="widget.data['lightbox']">
+                            <option value="none">{{'None' | trans}}</option>
+                            <option value="lightbox">{{'Lightbox' | trans}}</option>
                         </select>
                     </div>
                 </div>
