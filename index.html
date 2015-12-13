@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Slidesetlightbox Widget by rvalitov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Slidesetlightbox Widget</h1>
+      <h2 class="project-tagline">Advanced version of Yootheme&#39;s Slideset Widget (Widgetkit2) with lightbox support</h2>
+      <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox" class="btn">View on GitHub</a>
+      <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/logo.png" alt="Slidesetlightbox widget logo"></p>
+
+<h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
+
+<p><strong>Slidesetlightbox</strong> is an advanced <a href="http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset">Slideset widget</a> for <a href="https://yootheme.com/widgetkit">Yootheme Widgetkit2</a>. After installation it becomes available in the Widgets list as a "native" widget and can be used with any <a href="https://yootheme.com/themes">Warp 7 theme</a>.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Or why it's better than original Slideset provided by Yootheme?</p>
+
+<ul>
+<li>
+<strong>Lightbox support</strong> - you may choose how the widget will respond to user clicks: standard behavior or <a href="http://getuikit.com/docs/lightbox.html">lightbox mode</a>.</li>
+<li>
+<strong>Backward compatibility</strong> - all other behavior, styling and features of the original <a href="http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset">Slideset widget</a> are preserved.</li>
+</ul>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<h2>
+<a id="installation-overview" class="anchor" href="#installation-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation Overview</h2>
+
+<p>We use "clean" and "neat" approach according to the official Yootheme's manual:</p>
+
+<ul>
+<li><a href="http://yootheme.com/widgetkit/documentation/customizing/custom-widget-plugin">Custom widgetkit plugin</a></li>
+<li><a href="https://yootheme.com/widgetkit/documentation/customizing/where-to-store-your-customizations">Where to store your customizations</a></li>
+</ul>
+
+<p>Such approach allows you to:</p>
+
+<ul>
+<li>keep original Yootheme's Widgetkit source files</li>
+<li>preserve original Yootheme's functionality</li>
+<li>safely do updates to Yootheme's files (download new versions of Widgetkit 2), keeping our new widget (modifications won't be overwritten during update process)</li>
+</ul>
+
+<h2>
+<a id="installation-process" class="anchor" href="#installation-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation Process</h2>
+
+<p>The installation is very simple. You just need to copy the folder <em>slidesetlightbox</em> to <em>/templates/THEME-NAME/widgetkit/widgets/</em>, so that you will have a folder <em>/templates/THEME-NAME/widgetkit/widgets/slidesetlightbox</em>. The <em>THEME-NAME</em> is a folder of your <a href="https://yootheme.com/themes">Warp 7 theme</a>, e.g. it can be <em>yoo_vida</em>, <em>yoo_finch</em>, etc. </p>
+
+<h1>
+<a id="setup-and-usage" class="anchor" href="#setup-and-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup and usage</h1>
+
+<h2>
+<a id="configure-the-widget" class="anchor" href="#configure-the-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure the widget</h2>
+
+<p>After successful installation you should see the <em>Slideset Lightbox</em> widget in the widgetkit control panel page, so that you can select it from the list:
+<img src="https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/widgetkit-list.jpeg" alt="Slidesetlightbox widget"></p>
+
+<p>You should configure the widget as usual, e.g. the <a href="http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset">Yootheme documentation</a> can be useful.</p>
+
+<p>All the advanced features of the Slidesetlightbox are located in a dedicated section called <em>Advanced Features</em>:
+<img src="https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/settings.jpeg" alt="Slidesetlightbox widget settings screen">
+If you don't activate any of these features, then the Slidesetlightbox behaves exactly as the original Slideset widget from the Widgetkit bundle.</p>
+
+<p>Options and description:</p>
+
+<ul>
+<li>
+<strong>Lightbox</strong> - defines the behavior how widget responds to user clicks, possible values:
+
+<ul>
+<li>
+<strong>none</strong> - standard behavior, the widget works the same way as the original Slideset widget does.</li>
+<li>
+<strong>Lightbox</strong> - lightbox opens with "full size" image, user can switch between the images using array buttons (image grouping is implemented) in the lightbox mode without closing it.</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="authors-contributors-and-acknowledgment" class="anchor" href="#authors-contributors-and-acknowledgment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors, Contributors and Acknowledgment</h1>
+
+<ul>
+<li>This widget is created by <a href="http://www.valitov.me">Ramil Valitov</a>.</li>
+<li>The code is based on the original <a href="http://yootheme.com/demo/widgetkit/joomla/index.php/home/map">Slideset widget</a> by <a href="http://yootheme.com/">Yootheme</a>.</li>
+</ul>
+
+<h1>
+<a id="feedback" class="anchor" href="#feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feedback</h1>
+
+<p>Your feedback is very appreciated. If you want to see new features in this module, please, post your ideas and feature requests in the <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox/issues">issue tracker</a>.</p>
+
+<h1>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h1>
+
+<p>Having trouble with MapEx Widget? May be something has already been described in the <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki">Wiki area</a> or reported in the <a href="https://github.com/rvalitov/widgetkit-slidesetlightbox/issues">issue tracker</a>. If you don't find your problem there, then, please, add your issue there. </p>
+
+<p>Being a free project which I do in my spare time, I hope you understand that I can't offer 24/7 support:) You may contact me via e-mail <a href="mailto:ramilvalitov@gmail.com">ramilvalitov@gmail.com</a>, I will try to answer to all of them (if such messages imply an answer), however, not immediately, it may take a few days or a week... so, just be patient. </p>
+
+<p>Note, that I can answer only to questions and problems directly related to MapEx widget. Answers to basic questions about the widgetkit nature and simple help about how to use widgets in general or how to use Joomla you can find in appropriate forums:</p>
+
+<ul>
+<li><a href="http://forum.joomla.org/">Joomla</a></li>
+<li><a href="https://yootheme.com/support">Widgetkits</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rvalitov/widgetkit-slidesetlightbox">Slidesetlightbox Widget</a> is maintained by <a href="https://github.com/rvalitov">rvalitov</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-17951654-27");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
