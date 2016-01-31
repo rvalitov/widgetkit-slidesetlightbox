@@ -19,17 +19,17 @@ The new features that the Slidesetlightbox has and that are not available in the
 I didn't test it with Wordpress.
 
 # How to install?
-The installation procedure is described [here](https://github.com/rvalitov/widgetkit-map-ex/wiki/How-to-install).
+The installation procedure is described [here](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/How-to-install).
 
 # The manual
-Some issues about using the widget are available in the [Wiki area](https://github.com/rvalitov/widgetkit-map-ex/wiki).
+Some issues about using the widget are available in the [Wiki area](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki).
 
 # Extra
 A tutorial how the first version of this module was created is available on the [Yootheme forum](https://yootheme.com/support/question/85422).
 
 # Authors, Contributors and Acknowledgment
 * This widget is created by [Ramil Valitov](http://www.valitov.me).
-* The code is based on the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/map) by [Yootheme](http://yootheme.com/).
+* The code is based on the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) by [Yootheme](http://yootheme.com/).
 
 # Feedback
 Your feedback is very appreciated. If you want to see new features in this module, please, post your ideas and feature requests in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues).
