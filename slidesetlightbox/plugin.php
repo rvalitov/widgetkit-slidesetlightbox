@@ -74,6 +74,13 @@ return array(
 
         'init.admin' => function($event, $app) {
             $app['angular']->addTemplate('slidesetlightbox.edit', 'plugins/widgets/slidesetlightbox/views/edit.php', true);
+			//Adding tooltip:
+			$app['scripts']->add('uikit-tooltip', 'vendor/assets/uikit/js/components/tooltip.min.js', array('uikit'));
+			$app['styles']->add('uikit-tooltip', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/components/tooltip.min.css', array('uikit'));
+			//Marked:
+			$app['scripts']->add('marked', 'plugins/widgets/slidesetlightbox/assets/marked.min.js', array('uikit'));
+			//Updater:
+			$app['scripts']->add('slidesetlightbox.updater', 'plugins/widgets/slidesetlightbox/assets/updater.js', array('slidesetlightbox'));
         }
 
     )
