@@ -14,7 +14,7 @@ The new features that the Slidesetlightbox has and that are not available in the
 * **Tooltips for all options** - it's much easier to use the widget, because tooltips are available for all settings.
 
 # Supported platforms
-* The code is based on Widgetkit 2.5.0, however it should work with any Widgetkit 2.4.x and later.
+* The code is based on Widgetkit 2.5.0 (identical to 2.5.3), however it should work with any Widgetkit 2.4.x and later.
 * Joomla 3.4.x or later required
 I didn't test it with Wordpress.
 
