@@ -1,4 +1,4 @@
-![Slidesetlightbox widget logo](https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/logo.png)
+![Slidesetlightbox widget logo](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png)
 # Overview
 **Slidesetlightbox** is an advanced version of [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used as any other widget.
 
