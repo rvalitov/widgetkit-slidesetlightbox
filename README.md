@@ -7,6 +7,7 @@
 * **Present groups of images in sets** that you can loop through.
 * **Navigation controls and filters** - can apply different navigations and transitions, filter items by tag and display content items in an overlay.
 * **Backward compatibility** - all other behavior, styling and features of the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) are preserved.
+
 ### Unique Features
 The new features that the Slidesetlightbox has and that are not available in the original Slideset widget:
 
