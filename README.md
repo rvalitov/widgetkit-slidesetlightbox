@@ -1,46 +1,28 @@
 ![Slidesetlightbox widget logo](https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/logo.png)
 # Overview
-**Slidesetlightbox** is an advanced [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used with any [Warp 7 theme](https://yootheme.com/themes).
+**Slidesetlightbox** is an advanced version of [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used as any other widget.
 
 ## Features
-Or why it's better than original Slideset provided by Yootheme?
-* **Lightbox support** - you may choose how the widget will respond to user clicks: standard behavior or [lightbox mode](http://getuikit.com/docs/lightbox.html).
+### Basic Features
+* **Present groups of images in sets** that you can loop through.
+* **Navigation controls and filters** - can apply different navigations and transitions, filter items by tag and display content items in an overlay.
 * **Backward compatibility** - all other behavior, styling and features of the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) are preserved.
+### Unique Features
+The new features that the Slidesetlightbox has and that are not available in the original Slideset widget:
+
+* **Lightbox support** - you may choose how the widget will respond to user clicks: standard behavior or lightbox mode, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Lightbox-mode).
+* **Tooltips for all options** - it's much easier to use the widget, because tooltips are available for all settings.
 
 # Supported platforms
 * The code is based on Widgetkit 2.5.0, however it should work with any Widgetkit 2.4.x and later.
 * Joomla 3.4.x or later required
 I didn't test it with Wordpress.
 
-# Installation
-## Installation Overview
-We use "clean" and "neat" approach according to the official Yootheme's manual:
-* [Custom widgetkit plugin](http://yootheme.com/widgetkit/documentation/customizing/custom-widget-plugin)
-* [Where to store your customizations](https://yootheme.com/widgetkit/documentation/customizing/where-to-store-your-customizations)
+# How to install?
+The installation procedure is described [here](https://github.com/rvalitov/widgetkit-map-ex/wiki/How-to-install).
 
-Such approach allows you to:
-* keep original Yootheme's Widgetkit source files
-* preserve original Yootheme's functionality
-* safely do updates to Yootheme's files (download new versions of Widgetkit 2), keeping our new widget (modifications won't be overwritten during update process)
-
-## Installation Process
-The installation is very simple. You just need to copy the folder _slidesetlightbox_ to _/templates/THEME-NAME/widgetkit/widgets/_, so that you will have a folder _/templates/THEME-NAME/widgetkit/widgets/slidesetlightbox_. The _THEME-NAME_ is a folder of your [Warp 7 theme](https://yootheme.com/themes), e.g. it can be _yoo_vida_, _yoo_finch_, etc. 
-
-# Setup and usage
-## Configure the widget
-After successful installation you should see the _Slideset Lightbox_ widget in the widgetkit control panel page, so that you can select it from the list:
-![Slidesetlightbox widget](https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/widgetkit-list.jpeg)
-
-You should configure the widget as usual, e.g. the [Yootheme documentation](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) can be useful.
-
-All the advanced features of the Slidesetlightbox are located in a dedicated section called _Advanced Features_:
-![Slidesetlightbox widget settings screen](https://raw.githubusercontent.com/rvalitov/widgetkit-slidesetlightbox/master/images/settings.jpeg)
-If you don't activate any of these features, then the Slidesetlightbox behaves exactly as the original Slideset widget from the Widgetkit bundle.
-
-Options and description:
-* **Lightbox Type** - defines the behavior how widget responds to user clicks, possible values:
-    + **none** - standard behavior, the widget works the same way as the original Slideset widget does.
-    + **Lightbox** - lightbox opens with "full size" image, user can switch between the images using array buttons (image grouping is implemented) in the lightbox mode without closing it.
+# The manual
+Some issues about using the widget are available in the [Wiki area](https://github.com/rvalitov/widgetkit-map-ex/wiki).
 
 # Extra
 A tutorial how the first version of this module was created is available on the [Yootheme forum](https://yootheme.com/support/question/85422).
@@ -57,6 +39,7 @@ Having trouble with Slidesetlightbox Widget? May be something has already been d
 
 Being a free project which I do in my spare time, I hope you understand that I can't offer 24/7 support:) You may contact me via e-mail ramilvalitov@gmail.com, I will try to answer to all of them (if such messages imply an answer), however, not immediately, it may take a few days or a week... so, just be patient. 
 
-Note, that I can answer only to questions and problems directly related to MapEx widget. Answers to basic questions about the widgetkit nature and simple help about how to use widgets in general or how to use Joomla you can find in appropriate forums:
+Note, that I can answer only to questions and problems directly related to this widget. Answers to basic questions about the widgetkit nature and simple help about how to use widgets in general or how to use Joomla you can find in appropriate forums:
+
 * [Joomla](http://forum.joomla.org/)
 * [Widgetkits](https://yootheme.com/support)
