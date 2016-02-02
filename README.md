@@ -13,11 +13,13 @@ The new features that the Slidesetlightbox has and that are not available in the
 
 * **Lightbox support** - you may choose how the widget will respond to user clicks: standard behavior or lightbox mode, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Lightbox-mode).
 * **Tooltips for all options** - it's much easier to use the widget, because tooltips are available for all settings.
+* **Update notifications** - you will be notified if new versions of the widget are available.
 
 # Supported platforms
 * The code is based on Widgetkit 2.5.0 (identical to 2.5.3), however it should work with any Widgetkit 2.4.x and later.
 * Joomla 3.4.x or later required
-I didn't test it with Wordpress.
+
+Widget should work with Wordpress 4.4.x (according to feedback from users; I can't test it personally, because I don't have the required subscription).
 
 # How to install?
 The installation procedure is described [here](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/How-to-install).

@@ -1,4 +1,4 @@
-function checkWidgetUpdate($){
+jQuery(document).ready(function($){
 	/* General settings */
 	var git_url='https://github.com/rvalitov/';
 	var api_url='https://api.github.com/repos/rvalitov/';
@@ -7,9 +7,9 @@ function checkWidgetUpdate($){
 	/* Start of widget specific settings */
 	var distr_name='widgetkit-slidesetlightbox';
 	var widget_name='Slideset Ligthbox';
-	var widget_version='v1.1';
+	var widget_version='v1.1.1';
 	/*CAUTION: the month is zero-based*/
-	var widget_date=printNiceDate(new Date(2016,0,31));
+	var widget_date=printNiceDate(new Date(2016,01,02));
 	var widget_logo='https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png';
 	var widget_wiki=git_url+distr_name+'/wiki';
 	var widget_website=git_url+distr_name;
@@ -162,7 +162,4 @@ function checkWidgetUpdate($){
 				failedToUpdate();
 			}
 		});
-}
-jQuery(document).ready(function($){
-	checkWidgetUpdate($);
 });
