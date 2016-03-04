@@ -1,3 +1,5 @@
+![Version](https://img.shields.io/badge/Release-v1.1.1-green.svg?style=flat) ![Widgetkit](https://img.shields.io/badge/Widgetkit-v2.4.x+-green.svg?style=flat) ![Joomla](https://img.shields.io/badge/Joomla!-v3.4.x+-yellow.svg?style=flat) ![Wordpress](https://img.shields.io/badge/Wordpress-v4.4.x+-yellow.svg?style=flat)
+
 ![Slidesetlightbox widget logo](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png)
 # Overview
 **Slidesetlightbox** is an advanced version of [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used as any other widget.
@@ -36,6 +38,13 @@ A tutorial how the first version of this module was created is available on the 
 
 # Feedback
 Your feedback is very appreciated. If you want to see new features in this module, please, post your ideas and feature requests in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues).
+
+# Donations
+This is a free project that I do in my spare time. If you find it useful, then you can support it by donating some amount of money. This will help to keep the project alive and making it better: develop new features, make new releases, fix bugs, update the [manuals](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki), and provide at least some minimal technical support (there's an [issue tracker here](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues)).
+
+You can choose any payment gateway you prefer:
+
+[![PayPal](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-map-ex/images/money/paypal.png)](https://www.paypal.me/valitov/15eur) [![WebMoney](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-map-ex/images/money/webmoney.png)](https://funding.wmtransfer.com/mapex-widget) [![YandexMoney](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-map-ex/images/money/yandex.png)](https://money.yandex.ru/to/410011424143476)
 
 # Support or Contact
 Having trouble with Slidesetlightbox Widget? May be something has already been described in the [Wiki area](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki) or reported in the [issue tracker](https://github.com/rvalitov/widgetkit-slidesetlightbox/issues). If you don't find your problem there, then, please, add your issue there. 
