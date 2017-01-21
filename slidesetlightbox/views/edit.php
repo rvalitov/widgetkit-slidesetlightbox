@@ -373,6 +373,8 @@ $plugin=new WidgetkitExPlugin($app);
                             <option value="h2">H2</option>
                             <option value="h3">H3</option>
                             <option value="h4">H4</option>
+							<option value="h5">H5</option>
+							<option value="h6">H6</option>
                             <option value="large">{{'Extra Large' | trans}}</option>
                         </select>
                     </div>
@@ -476,64 +478,14 @@ $plugin=new WidgetkitExPlugin($app);
 
                 <h3 class="wk-form-heading">{{'About' | trans}}</h3>
 
-				<div class="uk-grid">
-					<div class="uk-text-center uk-width-medium-1-3" id="logo-widgetkit-slidesetlightbox">
-					</div>
-					<div class="uk-width-medium-2-3">
-						<table class="uk-table uk-table-striped">
-							<tr>
-								<td>
-									Widget Name
-								</td>
-								<td id="name-widgetkit-slidesetlightbox">
-									N/A
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Version
-								</td>
-								<td id="version-widgetkit-slidesetlightbox">
-									N/A
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Build Date
-								</td>
-								<td id="build-widgetkit-slidesetlightbox">
-									N/A
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Author<span data-uk-tooltip title="{{'See the complete information about contributors and acknowledgement on the website below.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span>
-								</td>
-								<td>
-									<a href="https://valitov.me" target="_blank">Ramil Valitov<i class="uk-icon uk-icon-external-link uk-margin-small-left"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Website
-								</td>
-								<td id="website-widgetkit-slidesetlightbox">
-									N/A
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Wiki and Manuals
-								</td>
-								<td id="wiki-widgetkit-slidesetlightbox">
-									N/A
-								</td>
-							</tr>
-						</table>
-						<div id="update-widgetkit-slidesetlightbox" class="uk-text-center">
-						</div>
-					</div>
-				<div>
+				<?php $plugin->printAboutInfo($app);?>
+
+				<h3 class="wk-form-heading">{{'Newsletter' | trans}}</h3>
+	
+				<?php $plugin->printNewsletterInfo($app);?>
+				
+				<h3 class="wk-form-heading">{{'Donation' | trans}}</h3>
+				<?php $plugin->printDonationInfo($app);?>
 
             </li>
         </ul>
