@@ -1,4 +1,11 @@
 <?php
+/*
+SliderEx plugin for Widgetkit 2.
+Author: Ramil Valitov
+Contacts: ramilvalitov@gmail.com
+Web: http://www.valitov.me/
+Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
+*/
 
 // Filter Nav
 $tabs_center = '';

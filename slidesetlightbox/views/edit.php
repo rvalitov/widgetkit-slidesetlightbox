@@ -1,12 +1,15 @@
 <?php
 /*
-Custom Slideset widget with Lightbox effect for Widgetkit 2.
+SliderEx plugin for Widgetkit 2.
 Author: Ramil Valitov
 Contacts: ramilvalitov@gmail.com
-This plugin adds Lightbox effect to a standard Slideset widget.
 Web: http://www.valitov.me/
 Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
 */
+
+use WidgetkitEx\SlidesetEx\WidgetkitExPlugin;
+$plugin=new WidgetkitExPlugin($app);
+
 ?>
 
 <div class="uk-grid uk-grid-divider uk-form uk-form-horizontal" data-uk-grid-margin>
@@ -31,14 +34,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Navigation' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Dotnav' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Enables/disables the dotted navigation control."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Dotnav' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Enables/disables the dotted navigation control.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['nav']"> {{'Show Dotnav' | trans}}</label>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-slidenav">{{'Slidenav' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Enables/disables the slide navigation control (left and right arrows)."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-slidenav">{{'Slidenav' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Enables/disables the slide navigation control (left and right arrows).' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-slidenav" class="uk-form-width-medium" ng-model="widget.data['slidenav']">
                             <option value="none">{{'None' | trans}}</option>
@@ -62,7 +65,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-filter">{{'Filter' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Slideset items can be filtered by tag. This option allows to choose the filtering navigation control. You should assign a tag for each item in order to make this feature work."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-filter">{{'Filter' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Slideset items can be filtered by tag. This option allows to choose the filtering navigation control. You should assign a tag for each item in order to make this feature work.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-filter" class="uk-form-width-medium" ng-model="widget.data['filter']">
                             <option value="none">{{'None' | trans}}</option>
@@ -99,7 +102,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Animations' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-animation">{{'Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Select the animation that is used for displaying the slideset items."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-animation">{{'Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Select the animation that is used for displaying the slideset items.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-animation" class="uk-form-width-medium" ng-model="widget.data['animation']">
                             <option value="fade">{{'Fade' | trans}}</option>
@@ -113,14 +116,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-duration">{{'Duration (ms)' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Duration of the animation."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-duration">{{'Duration (ms)' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Duration of the animation.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <input id="wk-duration" class="uk-form-width-medium" type="text" ng-model="widget.data['duration']">
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Autoplay' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="The autoplay feature automatically switches the slideset items."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Autoplay' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'The autoplay feature automatically switches the slideset items.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['autoplay']"> {{'Enable autoplay' | trans}}</label>
                         <p class="uk-form-controls-condensed" ng-if="widget.data.autoplay">
@@ -135,7 +138,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Columns' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-gutter">{{'Gutter' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Defines the spacing that is set between items."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-gutter">{{'Gutter' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Defines the spacing that is set between items.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-gutter" class="uk-form-width-medium" ng-model="widget.data['gutter']">
                             <option value="default">{{'Default' | trans}}</option>
@@ -147,7 +150,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-columns">{{'Phone Portrait' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Number of columns on phones in portrait view."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-columns">{{'Phone Portrait' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Number of columns on phones in portrait view.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-columns" class="uk-form-width-medium" ng-model="widget.data['columns']">
                             <option value="1">1</option>
@@ -161,7 +164,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-columns-small">{{'Phone Landscape' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Number of columns on phones in landscape view."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-columns-small">{{'Phone Landscape' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Number of columns on phones in landscape view.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-columns-small" class="uk-form-width-medium" ng-model="widget.data['columns_small']">
                             <option value="0">{{'Inherit' | trans}}</option>
@@ -176,7 +179,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-columns-medium">{{'Tablet' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Number of columns on tablets."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-columns-medium">{{'Tablet' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Number of columns on tablets.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-columns-medium" class="uk-form-width-medium" ng-model="widget.data['columns_medium']">
                             <option value="0">{{'Inherit' | trans}}</option>
@@ -191,7 +194,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-columns-large">{{'Desktop' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Number of columns on desktops."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-columns-large">{{'Desktop' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Number of columns on desktops.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-columns-large" class="uk-form-width-medium" ng-model="widget.data['columns_large']">
                             <option value="0">{{'Inherit' | trans}}</option>
@@ -206,7 +209,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-columns-xlarge">{{'Large Screens' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Number of columns on large screens."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-columns-xlarge">{{'Large Screens' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Number of columns on large screens.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-columns-xlarge" class="uk-form-width-medium" ng-model="widget.data['columns_xlarge']">
                             <option value="0">{{'Inherit' | trans}}</option>
@@ -223,7 +226,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Items' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-panel">{{'Panel' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="The panel wraps the slideset items. You can choose a panel styling here."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-panel">{{'Panel' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'The panel wraps the slideset items. You can choose a panel styling here.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-panel" class="uk-form-width-medium" ng-model="widget.data['panel']">
                             <option value="blank">{{'Blank' | trans}}</option>
@@ -246,14 +249,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Media' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Display the image."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Display the image.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['media']"> {{'Show media' | trans}}</label>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Image' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Set the width and height of the image in pixels. Use 'auto' for auto size."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Image' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Set the width and height of the image in pixels. Use \'auto\' for auto size.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <label><input class="uk-form-width-small" type="text" ng-model="widget.data['image_width']"> {{'Width (px)' | trans}}</label>
                         <p class="uk-form-controls-condensed">
@@ -263,7 +266,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-media-align">{{'Alignment' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Define the image alignment regarding to the content."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-media-align">{{'Alignment' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Define the image alignment regarding to the content.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-media-align" class="uk-form-width-medium" ng-model="widget.data['media_align']">
                             <option value="teaser">{{'Teaser' | trans}}</option>
@@ -275,7 +278,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-					<span class="uk-form-label" for="wk-media-border">{{'Border' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Defines the style of the image's border."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+					<span class="uk-form-label" for="wk-media-border">{{'Border' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Defines the style of the image\'s border.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-media-border" class="uk-form-width-medium" ng-model="widget.data['media_border']">
                             <option value="none">{{'None' | trans}}</option>
@@ -286,7 +289,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 				
 				<div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-media-lightbox">{{'Lightbox Type' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Enables/disables the lightbox mode."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-media-lightbox">{{'Lightbox Type' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Enables/disables the lightbox mode.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-media-lightbox" class="uk-form-width-medium" ng-model="widget.data['lightbox']">
                             <option value="none">{{'None' | trans}}</option>
@@ -298,7 +301,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Overlay' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-media-overlay">{{'Overlay' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Define what will be displayed inside the overlay or hide the overlay."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-media-overlay">{{'Overlay' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Define what will be displayed inside the overlay or hide the overlay.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-media-overlay" class="uk-form-width-medium" ng-model="widget.data['media_overlay']">
                             <option value="none">{{'None' | trans}}</option>
@@ -316,14 +319,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                                     <option value="slide-left">{{'Slide Left' | trans}}</option>
                                     <option value="slide-right">{{'Slide Right' | trans}}</option>
                                 </select>
-                                {{'Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="The animation that will be applied to the overlay when being displayed on hover."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span>
+                                {{'Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'The animation that will be applied to the overlay when being displayed on hover.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span>
                             </label>
                         </p>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-thumbnail-animation">{{'Image Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="The animation that will be applied to the image on hover."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-thumbnail-animation">{{'Image Animation' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'The animation that will be applied to the image on hover.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-thumbnail-animation" class="uk-form-width-medium" ng-model="widget.data['media_animation']">
                             <option value="none">{{'None' | trans}}</option>
@@ -341,7 +344,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Text' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Show or hide title, content and social buttons."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Show or hide title, content and social buttons.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <p class="uk-form-controls-condensed">
                             <label><input type="checkbox" ng-model="widget.data['title']"> {{'Show title' | trans}}</label>
@@ -356,7 +359,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-title-size">{{'Title Size' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Define the font size of the title."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-title-size">{{'Title Size' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Define the font size of the title.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-title-size" class="uk-form-width-medium" ng-model="widget.data['title_size']">
                             <option value="panel">{{'Default' | trans}}</option>
@@ -370,7 +373,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-text-align">{{'Alignment' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Define the text alignment."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-text-align">{{'Alignment' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Define the text alignment.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-text-align" class="uk-form-width-medium" ng-model="widget.data['text_align']">
                             <option value="left">{{'Left' | trans}}</option>
@@ -383,14 +386,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Link' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Display the Read More link. The link URL is added to each item in the Content Manager."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Display the Read More link. The link URL is added to each item in the Content Manager.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['link']"> {{'Show link' | trans}}</label>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-link-style">{{'Style' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Set the style of the Read More link."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-link-style">{{'Style' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Set the style of the Read More link.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-link-style" class="uk-form-width-medium" ng-model="widget.data['link_style']">
                             <option value="text">{{'Text' | trans}}</option>
@@ -404,7 +407,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-link-text">{{'Text' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Define the link text."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-link-text">{{'Text' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Define the link text.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <input id="wk-link-text" class="uk-form-width-medium" type="text" ng-model="widget.data['link_text']">
                     </div>
@@ -413,14 +416,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'Badge' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Show or hide the badge which is displayed over the content."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Display' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Show or hide the badge which is displayed over the content.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['badge']"> {{'Show badge' | trans}}</label>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-badge-style">{{'Style' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Defines the style of the badge."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-badge-style">{{'Style' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Defines the style of the badge.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-badge-style" class="uk-form-width-medium" ng-model="widget.data['badge_style']">
                             <option value="badge">{{'Default' | trans}}</option>
@@ -434,7 +437,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-badge-position">{{'Position' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="Defines the position of the badge."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-badge-position">{{'Position' | trans}}<span  data-uk-tooltip style="margin-top: 5px;" title="{{'Defines the position of the badge.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <select id="wk-badge-position" class="uk-form-width-medium" ng-model="widget.data['badge_position']">
                             <option value="panel">{{'Panel' | trans}}</option>
@@ -449,14 +452,14 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
                 <h3 class="wk-form-heading">{{'General' | trans}}</h3>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label">{{'Link Target' | trans}}<span data-uk-tooltip title="Enables/disables opening all links in a new window of the browser. Otherwise, they open in the same window."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label">{{'Link Target' | trans}}<span data-uk-tooltip title="{{'Enables/disables opening all links in a new window of the browser. Otherwise, they open in the same window.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls uk-form-controls-text">
                         <label><input type="checkbox" ng-model="widget.data['link_target']"> {{'Open all links in a new window' | trans}}</label>
                     </div>
                 </div>
 
                 <div class="uk-form-row">
-                    <span class="uk-form-label" for="wk-class">{{'HTML Class' | trans}}<span data-uk-tooltip title="Adds a custom CSS class to the widget. You can specify several classes using space between them."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <span class="uk-form-label" for="wk-class">{{'HTML Class' | trans}}<span data-uk-tooltip title="{{'Adds a custom CSS class to the widget. You can specify several classes using space between them.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
                     <div class="uk-form-controls">
                         <input id="wk-class" class="uk-form-width-medium" type="text" ng-model="widget.data['class']">
                     </div>
@@ -498,7 +501,7 @@ Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
 							</tr>
 							<tr>
 								<td>
-									Author<span data-uk-tooltip title="See the complete information about contributors and acknowledgement on the website below."><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span>
+									Author<span data-uk-tooltip title="{{'See the complete information about contributors and acknowledgement on the website below.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span>
 								</td>
 								<td>
 									<a href="https://valitov.me" target="_blank">Ramil Valitov<i class="uk-icon uk-icon-external-link uk-margin-small-left"></i></a>

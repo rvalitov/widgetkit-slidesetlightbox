@@ -1,12 +1,12 @@
 <?php
 /*
-Custom Slideset widget with Lightbox effect for Widgetkit 2.
+SliderEx plugin for Widgetkit 2.
 Author: Ramil Valitov
 Contacts: ramilvalitov@gmail.com
-This plugin adds Lightbox effect to a standard Slideset widget.
 Web: http://www.valitov.me/
 Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
 */
+
 
 // JS Options
 $options = array();

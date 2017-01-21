@@ -1,15 +1,33 @@
 <?php
+/*
+SlidesetEx plugin for Widgetkit 2.
+Author: Ramil Valitov
+E-mail: ramilvalitov@gmail.com
+Web: http://www.valitov.me/
+Git: https://github.com/rvalitov/widgetkit-slidesetlightbox
+*/
+
+require_once(__DIR__.'/views/WidgetkitExPlugin.php');
+use WidgetkitEx\SlidesetEx\WidgetkitExPlugin;
 
 return array(
 
     'name' => 'widget/slidesetlightbox',
 
     'main' => 'YOOtheme\\Widgetkit\\Widget\\Widget',
+	
+	'plugin_version' => 'v1.2.0',
+	
+	'plugin_date' => '19/01/2017',
+	
+	'plugin_logo' => 'https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png',
+	
+	'plugin_wiki' => 'https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki',
 
     'config' => array(
 
         'name'  => 'slidesetlightbox',
-        'label' => 'Slideset Lightbox',
+        'label' => 'SlidesetEx',
         'core'  => true,
         'icon'  => 'plugins/widgets/slidesetlightbox/widget.svg',
         'view'  => 'plugins/widgets/slidesetlightbox/views/widget.php',
@@ -69,19 +87,52 @@ return array(
     'events' => array(
 
         'init.site' => function($event, $app) {
-            $app['scripts']->add('uikit-slideset', 'vendor/assets/uikit/js/components/slideset.min.js', array('uikit'));
+			$uikit=(WidgetkitExPlugin::getCSSPrefix($app)=='uk') ? 'uikit' : 'uikit2';
+            $app['scripts']->add($uikit.'-slideset', 'vendor/assets/uikit/js/components/slideset.min.js', array($uikit));
         },
 
         'init.admin' => function($event, $app) {
+            $plugin=new WidgetkitExPlugin($app);
+			$uikit=(WidgetkitExPlugin::getCSSPrefix($app)=='uk') ? 'uikit' : 'uikit2';
+			//Adding our own translations:
+			$app['translator']->addResource('plugins/widgets/slidesetlightbox/languages/'.$app['locale'].'.json');
+			//Edit template:
             $app['angular']->addTemplate('slidesetlightbox.edit', 'plugins/widgets/slidesetlightbox/views/edit.php', true);
 			//Adding tooltip:
-			$app['scripts']->add('uikit-tooltip', 'vendor/assets/uikit/js/components/tooltip.min.js', array('uikit'));
-			$app['styles']->add('uikit-tooltip', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/components/tooltip.min.css', array('uikit'));
+			$app['scripts']->add($uikit.'-tooltip', 'vendor/assets/uikit/js/components/tooltip.min.js', array($uikit));
+			$app['styles']->add($uikit.'-tooltip', 'https://cdnjs.cloudflare.com/ajax/libs/uikit/'.$plugin->getUIkitVersion().'/css/components/tooltip.min.css', array($uikit));
+			//jQuery wait plugin:
+			$app['scripts']->add('jquery.wait', 'plugins/widgets/slidesetlightbox/assets/jquery.wait.min.js', array($uikit));
 			//Marked:
-			$app['scripts']->add('marked', 'plugins/widgets/slidesetlightbox/assets/marked.min.js', array('uikit'));
-			//Updater:
-			$app['scripts']->add('slidesetlightbox.updater', 'plugins/widgets/slidesetlightbox/assets/updater.js', array('slidesetlightbox'));
-        }
+			$app['scripts']->add('marked', 'plugins/widgets/slidesetlightbox/assets/marked.min.js', array($uikit));
+			//Mailchimp for subscription:
+			$app['scripts']->add('mailchimp', 'plugins/widgets/slidesetlightbox/assets/jquery.formchimp.min.js', array($uikit));
+			//jQuery form validator http://www.formvalidator.net/:
+			$app['scripts']->add('jquery-form-validator', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.20/jquery.form-validator.min.js', array($uikit));
+			//Underscore.js
+			$app['scripts']->add('underscore', 'plugins/widgets/slidesetlightbox/assets/underscore-min.js', array($uikit));
+			//Semantic version compare
+			$app['scripts']->add('versioncompare', 'plugins/widgets/slidesetlightbox/assets/versioncompare.min.js', array($uikit));
+			//Marked:
+			$app['scripts']->add('replacer', 'plugins/widgets/slidesetlightbox/assets/replacer.min.js', array($uikit));
+			//Generating dynamic update script:
+			$app['scripts']->add('slidesetlightbox.dynamic-updater', $plugin->generateUpdaterJS($app), array(), 'string');
+        },
+		
+		'request' => function($event, $app) {
+			$global=null;
+			if ( (isset($app['request'])) && (isset($app['request']->request)) ) {
+				$content=$app['request']->request->get('content');
+				if (isset($content['data']['_widget']['data']['global']))
+					$global=$content['data']['_widget']['data']['global'];
+			}
+				
+			if ($global){
+				//Global is set for valid requests like "Save" and "Save & Close"
+				$plugin=new WidgetkitExPlugin($app);
+				$plugin->saveGlobalSettings($global);
+			}
+		}
 
     )
 
