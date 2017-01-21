@@ -28,9 +28,7 @@ $grid .= $settings['columns_medium'] ? ' uk-grid-width-medium-1-'.$settings['col
 $grid .= $settings['columns_large'] ? ' uk-grid-width-large-1-'.$settings['columns_large'] : '';
 $grid .= $settings['columns_xlarge'] ? ' uk-grid-width-xlarge-1-'.$settings['columns_xlarge'] : '';
 
-$grid .= ($settings['gutter'] == 'collapse') ? ' uk-grid-collapse' : '' ;
-$grid .= ($settings['gutter'] == 'small') ? ' uk-grid-small' : '' ;
-$grid .= ($settings['gutter'] == 'medium') ? ' uk-grid-medium' : '' ;
+$grid .= in_array($settings['gutter'], array('collapse','large','medium','small')) ? ' {wk}-grid-'.$settings['gutter'] : '' ;
 
 // Panel
 $panel = 'uk-panel';
@@ -120,15 +118,21 @@ $link_target = ($settings['link_target']) ? ' target="_blank"' : '';
 
 // Filter Tags
 $tags = array();
-foreach ($items as $i => $item) {
-    if ($item['tags']) {
-        $tags = array_merge($tags, $item['tags']);
-    }
+if (isset($settings['filter_tags']) && is_array($settings['filter_tags'])) {
+    $tags = $settings['filter_tags'];
 }
-$tags = array_unique($tags);
 
-natsort($tags);
-$tags = array_values($tags);
+if(!count($tags)){
+	foreach ($items as $i => $item) {
+		if ($item['tags']) {
+			$tags = array_merge($tags, $item['tags']);
+		}
+	}
+	$tags = array_unique($tags);
+
+	natsort($tags);
+	$tags = array_values($tags);
+}
 
 // JS Options
 $options[] = (count($tags) && $settings['filter'] != 'none' && !$settings['filter_all']) ? 'filter: \'' . $tags[0] . '\'': '';

@@ -38,6 +38,7 @@ return array(
             'slidenav_align'     => 'center',
             'slidenav_contrast'  => false,
             'filter'             => 'none',
+			'filter_tags'        => array(),
             'filter_position'    => 'top',
             'filter_align'       => 'left',
             'filter_all'         => false,

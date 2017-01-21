@@ -85,6 +85,11 @@ $plugin=new WidgetkitExPlugin($app);
                         </p>
                         <p class="uk-form-controls-condensed" ng-if="widget.data.filter != 'none'">
                             <label>
+                                <input class="uk-form-width-1-1" type="text" ng-model="widget.data['filter_tags']" ng-list placeholder= "{{ 'tag, tag, ...' | trans }}"> {{ 'Show only selected tags (Optional)' | trans }}
+                            </label>
+                        </p>
+                        <p class="uk-form-controls-condensed" ng-if="widget.data.filter != 'none'">
+                            <label>
                                 <select class="uk-form-width-small" ng-model="widget.data['filter_align']">
                                     <option value="left">{{'Left' | trans}}</option>
                                     <option value="center">{{'Center' | trans}}</option>
@@ -145,6 +150,7 @@ $plugin=new WidgetkitExPlugin($app);
                             <option value="collapse">{{'Collapse' | trans}}</option>
                             <option value="small">{{'Small' | trans}}</option>
                             <option value="medium">{{'Medium' | trans}}</option>
+							<option value="large">{{'Large' | trans}}</option>
                         </select>
                     </div>
                 </div>
