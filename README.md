@@ -2,12 +2,13 @@
 
 ![Slidesetlightbox widget logo](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png)
 # Overview
-**Slidesetlightbox** is an advanced version of [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used as any other widget.
+**SlidesetEx** (formerly known as Slideset Lightbox) is an advanced version of [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) for [Yootheme Widgetkit2](https://yootheme.com/widgetkit). After installation it becomes available in the Widgets list as a "native" widget and can be used as any other widget.
 
 ## Features
 ### Basic Features
 * **Present groups of images in sets** that you can loop through.
 * **Navigation controls and filters** - can apply different navigations and transitions, filter items by tag and display content items in an overlay.
+* **Compatible with Yootheme Pro** - you can use this widget with [Yootheme Pro](https://yootheme.com/pro/).
 * **Backward compatibility** - all other behavior, styling and features of the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) are preserved.
 
 ### Unique Features
@@ -16,6 +17,10 @@ The new features that the Slidesetlightbox has and that are not available in the
 * **Lightbox support** - you may choose how the widget will respond to user clicks: standard behavior or lightbox mode, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Lightbox-mode).
 * **Tooltips for all options** - it's much easier to use the widget, because tooltips are available for all settings.
 * **Update notifications** - you will be notified if new versions of the widget are available.
+* **Multilingual interface**, translated into languages:
+	* **English** (en_GB)
+	* **Русский** (ru_RU)
+	* Your language not listed? You can help with translation, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Translation-issues).
 
 # Supported platforms
 * The core code is based on Widgetkit 2.5.0 and was updated since accordingly. This widget should work with any Widgetkit 2.4.x and later. Tested on Widgetkit 2.5.x, 2.6.x, 2.7.x, 2.8.x, 2.9.x.
