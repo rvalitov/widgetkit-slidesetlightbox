@@ -17,7 +17,7 @@ $plugin=new WidgetkitExPlugin($app);
 
         <div class="wk-panel-marginless">
             <ul class="uk-nav uk-nav-side" data-uk-switcher="{connect:'#nav-content'}">
-                <li><a href="">Slideset</a></li>
+                <li><a href="">{{'Slideset' | trans}}</a></li>
                 <li><a href="">{{'Media' | trans}}</a></li>
                 <li><a href="">{{'Content' | trans}}</a></li>
                 <li><a href="">{{'General' | trans}}</a></li>
