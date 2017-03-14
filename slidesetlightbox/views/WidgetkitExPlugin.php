@@ -350,6 +350,7 @@ class WidgetkitExPlugin{
 		if (!$f)
 			return "";
 		
+		$v='';
 		if (preg_match_all("@.*\\\$wp_version\s*=\s*'.+';@",$f,$matches))
 			$v.=explode("'",$matches[0][0],3)[1];
 		return trim($v);
@@ -531,20 +532,20 @@ class WidgetkitExPlugin{
 		$php_version=htmlspecialchars(@phpversion());
 		$phpinfo;
 		if (version_compare(self::minPHPVersion,$php_version)>0)
-			$phpinfo='<span  data-uk-tooltip class="uk-text-danger" style="margin-top: 5px;" title="{{ \'Your PHP is too old! Upgrade is strongly recommended! This plugin may not work with your version of PHP.\' |trans}}"><i class="uk-icon-warning  uk-margin-small-right"></i>'.$php_version.'</span>';
+			$phpinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-danger" style="margin-top: 5px;" title="{{ \'Your PHP is too old! Upgrade is strongly recommended! This plugin may not work with your version of PHP.\' |trans}}"><i class="uk-icon-warning  uk-margin-small-right"></i>'.$php_version.'</span>';
 		else
 		if (version_compare(self::stablePHPVersion,$php_version)>0)
-			$phpinfo='<span  data-uk-tooltip class="uk-text-warning" style="margin-top: 5px;" title="{{ \'Your PHP is quite old. Although this plugin can work with your version of PHP, upgrade is recommended to the latest stable version of PHP.\' |trans}}"><i class="uk-icon-warning  uk-margin-small-right"></i>'.$php_version.'</span>';
+			$phpinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-warning" style="margin-top: 5px;" title="{{ \'Your PHP is quite old. Although this plugin can work with your version of PHP, upgrade is recommended to the latest stable version of PHP.\' |trans}}"><i class="uk-icon-warning  uk-margin-small-right"></i>'.$php_version.'</span>';
 		else
-			$phpinfo='<span  data-uk-tooltip class="uk-text-success" style="margin-top: 5px;" title="{{ \'Your PHP version is OK.\' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i>'.$php_version.' ('.@php_sapi_name().')</span>';
+			$phpinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-success" style="margin-top: 5px;" title="{{ \'Your PHP version is OK.\' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i>'.$php_version.' ('.@php_sapi_name().')</span>';
 
 		$wkinfo;
 		if (version_compare(self::minWKVersion,$versionWK)>0)
-			$wkinfo='<span  data-uk-tooltip class="uk-text-danger" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is too old. Upgrade is strongly recommended. Although this plugin may work with your version of Widgetkit, upgrade is recommended to the latest stable version of Widgetkit.\' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i>'.$versionWK.'</span>';
+			$wkinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-danger" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is too old. Upgrade is strongly recommended. Although this plugin may work with your version of Widgetkit, upgrade is recommended to the latest stable version of Widgetkit.\' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i>'.$versionWK.'</span>';
 		if (version_compare(self::stableWKVersion,$versionWK)>0)
-			$wkinfo='<span  data-uk-tooltip class="uk-text-warning" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is quite old. Although this plugin may work with your version of Widgetkit, upgrade is recommended to the latest stable version of Widgetkit.\' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i>'.$versionWK.'</span>';
+			$wkinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-warning" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is quite old. Although this plugin may work with your version of Widgetkit, upgrade is recommended to the latest stable version of Widgetkit.\' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i>'.$versionWK.'</span>';
 		else
-			$wkinfo='<span  data-uk-tooltip class="uk-text-success" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is OK.\' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i>'.$versionWK.'</span>';
+			$wkinfo='<span data-uk-tooltip="\'cls\':\'uk-' . $this->plugin_info['safe_name'] . '-tooltip\'" class="uk-text-success" style="margin-top: 5px;" title="{{ \'Your Widgetkit version is OK.\' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i>'.$versionWK.'</span>';
 		
 		$cmsinfo=$this->CMS.' '.$this->CMSVersion;
 		
@@ -666,8 +667,8 @@ EOT;
 					{{ 'UIkit version' |trans}}
 				</td>
 				<td>
-					<span id="version-uikit-valid-{$this->plugin_info['safe_name']}" data-uk-tooltip class="uk-text-success" style="margin-top: 5px;" title="{{ 'Your UIkit version is OK.' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i><span class="version-uikit-{$this->plugin_info['safe_name']}">Unknown</span></span>
-					<span id="version-uikit-invalid-{$this->plugin_info['safe_name']}" data-uk-tooltip class="uk-text-danger" style="margin-top: 5px;" title="{{ 'Your UIkit version is too old, please upgrade your Widgetkit.' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i><span class="version-uikit-{$this->plugin_info['safe_name']}">Unknown</span></span>
+					<span id="version-uikit-valid-{$this->plugin_info['safe_name']}" data-uk-tooltip="'cls':'uk-{$this->plugin_info['safe_name']}-tooltip'" class="uk-text-success" style="margin-top: 5px;" title="{{ 'Your UIkit version is OK.' |trans}}"><i class="uk-icon-check uk-margin-small-right"></i><span class="version-uikit-{$this->plugin_info['safe_name']}">Unknown</span></span>
+					<span id="version-uikit-invalid-{$this->plugin_info['safe_name']}" data-uk-tooltip="'cls':'uk-{$this->plugin_info['safe_name']}-tooltip'" class="uk-text-danger" style="margin-top: 5px;" title="{{ 'Your UIkit version is too old, please upgrade your Widgetkit.' |trans}}"><i class="uk-icon-warning uk-margin-small-right"></i><span class="version-uikit-{$this->plugin_info['safe_name']}">Unknown</span></span>
 				</td>
 			</tr>
 			<tr>
@@ -683,7 +684,7 @@ EOT;
 					{{ 'Yootheme Pro compatible' |trans}}
 				</td>
 				<td>
-					<span data-uk-tooltip style="margin-top: 5px;" title="{{ 'Widgetkit version 2.9.0 and later are compatible with Yootheme Pro.' |trans}}">
+					<span data-uk-tooltip="'cls':'uk-{$this->plugin_info['safe_name']}-tooltip'" style="margin-top: 5px;" title="{{ 'Widgetkit version 2.9.0 and later are compatible with Yootheme Pro.' |trans}}">
 						{$YoothemeProCompatible}
 					</span>
 				</td>
@@ -853,14 +854,6 @@ EOT;
 </div>
 
 <script>
-	jQuery.validate({
-		form: '#form-{$this->plugin_info['safe_name']}-subscribe',
-		modules : 'html5',
-		errorElementClass: 'uk-form-danger',
-		errorMessageClass: 'uk-text-danger',
-		validateOnBlur : true,
-		scrollToTopOnError : false
-	});
 	jQuery('#form-{$this->plugin_info['safe_name']}-subscribe').formchimp();
 	
 	/*Geolocation if nessesary*/

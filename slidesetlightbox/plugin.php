@@ -95,6 +95,8 @@ return array(
         'init.admin' => function($event, $app) {
             $plugin=new WidgetkitExPlugin($app);
 			$uikit=(WidgetkitExPlugin::getCSSPrefix($app)=='uk') ? 'uikit' : 'uikit2';
+			//Backend CSS
+			$app['styles']->add('slideset_ex_edit', 'plugins/widgets/slidesetlightbox/css/slidesetex.edit.css', array('widgetkit-application'));
 			//Adding our own translations:
 			$app['translator']->addResource('plugins/widgets/slidesetlightbox/languages/'.$app['locale'].'.json');
 			//Edit template:
