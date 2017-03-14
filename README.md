@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Release-v1.2.0-green.svg?style=flat) ![Widgetkit](https://img.shields.io/badge/Widgetkit-v2.4.x+-green.svg?style=flat) ![Joomla](https://img.shields.io/badge/Joomla!-v3.4.x+-yellow.svg?style=flat) ![Wordpress](https://img.shields.io/badge/Wordpress-v4.4.x+-yellow.svg?style=flat) ![PHP7](https://img.shields.io/badge/PHP7-compatible-blue.svg?style=flat) ![YoothemePro](https://img.shields.io/badge/YoothemePro-compatible-blue.svg?style=flat)
+![Version](https://img.shields.io/badge/Release-v1.2.1-green.svg?style=flat) ![Widgetkit](https://img.shields.io/badge/Widgetkit-v2.4.x+-green.svg?style=flat) ![Joomla](https://img.shields.io/badge/Joomla!-v3.4.x+-yellow.svg?style=flat) ![Wordpress](https://img.shields.io/badge/Wordpress-v4.4.x+-yellow.svg?style=flat) ![PHP7](https://img.shields.io/badge/PHP7-compatible-blue.svg?style=flat) ![YoothemePro](https://img.shields.io/badge/YoothemePro-compatible-blue.svg?style=flat)
 
 ![Slidesetlightbox widget logo](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png)
 # Overview
@@ -20,6 +20,7 @@ The new features that the Slidesetlightbox has and that are not available in the
 * **Multilingual interface**, translated into languages:
 	* **English** (en_GB)
 	* **Русский** (ru_RU)
+	* **Deutsch** (de_DE)
 	* Your language not listed? You can help with translation, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Translation-issues).
 
 # Supported platforms
@@ -42,6 +43,7 @@ A tutorial how the first version of this module was created is available on the 
 # Authors, Contributors and Acknowledgment
 * This widget is created by [Ramil Valitov](http://www.valitov.me).
 * The code is based on the original [Slideset widget](http://yootheme.com/demo/widgetkit/joomla/index.php/home/slideset) by [Yootheme](http://yootheme.com/).
+* Thanks to [Marco Rensch](https://github.com/marcorensch) for translation to German language.
 
 ## Disclaimer
 This project is NOT affiliated with, endorsed, or sponsored by the Yootheme. Widgetkit, its name, trademark, and other aspects of the app are trademarked and owned by their respective owners.
