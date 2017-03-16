@@ -179,15 +179,20 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
                 }
 				$socials = str_replace('{wk}',$cssprefix,$socials);
 
+				//Lightbox source
+				if (empty($settings['lightbox_media']))
+					$lightbox_source = 'media';
+				else
+					$lightbox_source = $settings['lightbox_media'];
+				if ($item->type($lightbox_source) == 'image')
+					$lightbox_source = $item->get($lightbox_source);
+				else
+					$lightbox_source = $item->get('media');
+				
                 // Second Image as Overlay
                 $media2 = '';
-                if ($settings['media_overlay'] == 'image') {
-                    foreach ($item as $field) {
-                        if ($field != 'media' && $item->type($field) == 'image') {
-                            $media2 = $field;
-                            break;
-                        }
-                    }
+                if ( ($settings['media_overlay'] == 'image') && ($item->type('media2') == 'image') ) {
+					$media2 = 'media2';
                 }
 
                 // Media Type
@@ -239,7 +244,7 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
                 $overlay_hover = '';
                 $panel_hover   = '';
 
-                if ($item['link']) {
+                if ( ($item['link']) || ( $settings['media_overlay'] == 'image' && $media2 ) ) {
 
                     if ($settings['panel_link']) {
 
@@ -256,10 +261,11 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
 
                     } elseif ($settings['media_overlay'] == 'link' || $settings['media_overlay'] == 'icon' || $settings['media_overlay'] == 'image') {
 						if ($settings['lightbox']=='lightbox'){
-							//Nothing here
+							$overlay = '<a class="{wk}-position-cover {wk}-position-z-index" title="' . htmlspecialchars($item['title']) . '" data-lightbox-type="image" data-{wk}-lightbox="{group:\'' . $groupcode . '\'}" href="' . $lightbox_source . '"' . $link_target . '></a>';
 						}
 						else
-							$overlay = '<a class="{wk}-position-cover" href="' . $item->escape('link') . '"' . $link_target . '></a>';
+							if ($item['link'])
+								$overlay = '<a class="{wk}-position-cover" href="' . $item->escape('link') . '"' . $link_target . '></a>';
                         $overlay_hover = ' {wk}-overlay-hover';
                     }
 
@@ -304,15 +310,15 @@ $class = $settings['class'] ? ' class="' . $settings['class'] . '"' : '';
                         $title_size .= ' {wk}-margin-bottom-remove';
                 }
 				$title_size = str_replace('{wk}',$cssprefix,$title_size);
-
+				
             ?>
 
             <li<?php echo $filter; ?>>
 
                 <div class="<?php echo $panel; ?><?php echo $panel_hover; ?> <?php echo $cssprefix?>-text-<?php echo $settings['text_align']; ?>">
 
-					<?php if ($settings['lightbox']=='lightbox') : ?>
-					<a class="<?php echo $cssprefix?>-position-cover <?php echo $cssprefix?>-position-z-index" title="<?php echo htmlspecialchars($item['title']);?>" data-lightbox-type="image" data-<?php echo $cssprefix?>-lightbox="{group:'<?php echo $groupcode;?>'}" href="<?php echo $item->get('media'); ?>"<?php echo $link_target; ?>></a>
+					<?php if ($settings['lightbox']=='lightbox' && ($settings['media_overlay'] != 'image' || !$media2) ) : ?>
+					<a class="<?php echo $cssprefix?>-position-cover <?php echo $cssprefix?>-position-z-index" title="<?php echo htmlspecialchars($item['title']);?>" data-lightbox-type="image" data-<?php echo $cssprefix?>-lightbox="{group:'<?php echo $groupcode;?>'}" href="<?php echo $lightbox_source; ?>"<?php echo $link_target; ?>></a>
 					<?php elseif ($item['link'] && $settings['panel_link']) : ?>
                     <a class="<?php echo $cssprefix?>-position-cover <?php echo $cssprefix?>-position-z-index" href="<?php echo $item->escape('link'); ?>"<?php echo $link_target; ?>></a>
                     <?php endif; ?>

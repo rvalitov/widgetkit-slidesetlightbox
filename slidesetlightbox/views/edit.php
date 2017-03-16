@@ -303,6 +303,17 @@ $plugin=new WidgetkitExPlugin($app);
                         </select>
                     </div>
                 </div>
+				
+				<div class="uk-form-row">
+                    <span class="uk-form-label" for="wk-media-lightbox_media">{{'Lightbox Media' | trans}}<span data-uk-tooltip="'cls':'uk-slidesetlightbox-tooltip'" style="margin-top: 5px;" title="{{'Select content field (media) that will be used as a source for the lightbox.' | trans}}"><i class="uk-icon uk-icon-question-circle uk-margin-small-left" style="color:#ffb105"></i></span></span>
+                    <div class="uk-form-controls">
+                        <select id="wk-media-lightbox_media" class="uk-form-width-medium" ng-model="widget.data['lightbox_media']">
+                            <option value="media">{{'Media' | trans}}</option>
+                            <option value="media2">{{'Media 2' | trans}}</option>
+							<option value="media3">{{'Media 3' | trans}}</option>
+                        </select>
+                    </div>
+                </div>
 
                 <h3 class="wk-form-heading">{{'Overlay' | trans}}</h3>
 

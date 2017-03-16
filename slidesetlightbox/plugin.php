@@ -66,6 +66,7 @@ return array(
             'media_animation'    => 'scale',
 			
 			'lightbox'    		 => 'lightbox',
+			'lightbox_media' 	 => 'media',
 
             'title'              => true,
             'content'            => true,
