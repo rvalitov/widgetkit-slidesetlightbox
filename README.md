@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Release-v1.2.1-green.svg?style=flat) ![Widgetkit](https://img.shields.io/badge/Widgetkit-v2.4.x+-green.svg?style=flat) ![Joomla](https://img.shields.io/badge/Joomla!-v3.4.x+-yellow.svg?style=flat) ![Wordpress](https://img.shields.io/badge/Wordpress-v4.4.x+-yellow.svg?style=flat) ![PHP7](https://img.shields.io/badge/PHP7-compatible-blue.svg?style=flat) ![YoothemePro](https://img.shields.io/badge/YoothemePro-compatible-blue.svg?style=flat)
+![Version](https://img.shields.io/badge/Release-v1.2.2-green.svg?style=flat) ![Widgetkit](https://img.shields.io/badge/Widgetkit-v2.4.x+-green.svg?style=flat) ![Joomla](https://img.shields.io/badge/Joomla!-v3.4.x+-yellow.svg?style=flat) ![Wordpress](https://img.shields.io/badge/Wordpress-v4.4.x+-yellow.svg?style=flat) ![PHP7](https://img.shields.io/badge/PHP7-compatible-blue.svg?style=flat) ![YoothemePro](https://img.shields.io/badge/YoothemePro-compatible-blue.svg?style=flat)
 
 ![Slidesetlightbox widget logo](https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png)
 # Overview
@@ -15,6 +15,7 @@
 The new features that the Slidesetlightbox has and that are not available in the original Slideset widget:
 
 * **Lightbox support** - you may choose how the widget will respond to user clicks: standard behavior or lightbox mode, [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Lightbox-mode).
+* **Lightbox source** - you may choose different images for slideset and lightbox modes [read more](https://github.com/rvalitov/widgetkit-slidesetlightbox/wiki/Lightbox-mode).
 * **Tooltips for all options** - it's much easier to use the widget, because tooltips are available for all settings.
 * **Update notifications** - you will be notified if new versions of the widget are available.
 * **Multilingual interface**, translated into languages:
