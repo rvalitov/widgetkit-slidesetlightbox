@@ -111,8 +111,6 @@ return array(
 			$app['scripts']->add('marked', 'plugins/widgets/slidesetlightbox/assets/marked.min.js', array($uikit));
 			//Mailchimp for subscription:
 			$app['scripts']->add('mailchimp', 'plugins/widgets/slidesetlightbox/assets/jquery.formchimp.min.js', array($uikit));
-			//jQuery form validator http://www.formvalidator.net/:
-			$app['scripts']->add('jquery-form-validator', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.20/jquery.form-validator.min.js', array($uikit));
 			//Underscore.js
 			$app['scripts']->add('underscore', 'plugins/widgets/slidesetlightbox/assets/underscore-min.js', array($uikit));
 			//Semantic version compare
