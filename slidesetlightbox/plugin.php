@@ -16,9 +16,9 @@ return array(
 
     'main' => 'YOOtheme\\Widgetkit\\Widget\\Widget',
 	
-	'plugin_version' => 'v1.2.2',
+	'plugin_version' => 'v1.2.3',
 	
-	'plugin_date' => '21/10/2017',
+	'plugin_date' => '25/04/2018',
 	
 	'plugin_logo' => 'https://raw.githubusercontent.com/wiki/rvalitov/widgetkit-slidesetlightbox/images/logo.png',
 	
